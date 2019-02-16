@@ -29,6 +29,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var searchButton: UIButton!
     @IBOutlet weak var weatherSegmentedControl: UISegmentedControl!
+    @IBOutlet weak var cityLabel: UILabel!
     
     private var linksInItem : Array<String> = []
     private var downloadURL: URLSessionTask = URLSessionTask()
@@ -78,6 +79,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
                                 }
                                 DispatchQueue.main.async {
                                     self.tableView.reloadData()
+                                    self.cityLabel.text = decoder.city?.name
                                 }
                             }
                         }
@@ -112,6 +114,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
                                 }
                                 DispatchQueue.main.async {
                                     self.tableView.reloadData()
+                                    self.cityLabel.text = decoder.city?.name
                                 }
                             }
                         }
