@@ -36,11 +36,12 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     private var processingRequest = false
     
     //MARK: - FUNCTION
+    // https://api.openweathermap.org/data/2.5/forecast?lat=37.78&lon=-122.40&appid=4d24cbf9d70b0c3cedc62cc36c70ec13
     private func urlCitySearchRequest(searchText: String) -> URL? {
-        let firstQuery = "AIzaSyC5yPrC3W3pc9yWX2zIBv7VOyZC_C0xB70"
-        let secondQuery = "009554791418314018500:efecjccvhra"
+        let appid = "4d24cbf9d70b0c3cedc62cc36c70ec13"
+        let cityApi: String = searchText.replacingOccurrences(of: " ", with: "%20")
         
-        if let url = URL(string: "https://www.googleapis.com/customsearch/v1?q=" + searchText + "&key=" + firstQuery + "&cx=" + secondQuery) {
+        if let url = URL(string: "https://api.openweathermap.org/data/2.5/forecast?lat=" + cityApi + "&appid=" + appid) {
             return url
         } else {
             return nil
@@ -48,10 +49,10 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     }
     
     private func urlLocationSearchRequest(searchText: String) -> URL? {
-        let firstQuery = "AIzaSyC5yPrC3W3pc9yWX2zIBv7VOyZC_C0xB70"
-        let secondQuery = "009554791418314018500:efecjccvhra"
+        let appid = "4d24cbf9d70b0c3cedc62cc36c70ec13"
+        let locationCoordinateAPI: String = searchText.replacingOccurrences(of: ", ", with: "&lon=")
         
-        if let url = URL(string: "https://www.googleapis.com/customsearch/v1?q=" + searchText + "&key=" + firstQuery + "&cx=" + secondQuery) {
+        if let url = URL(string: "https://api.openweathermap.org/data/2.5/forecast?lat=" + locationCoordinateAPI + "&appid=" + appid) {
             return url
         } else {
             return nil
