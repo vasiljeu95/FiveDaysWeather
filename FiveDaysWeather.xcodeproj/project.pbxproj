@@ -12,6 +12,7 @@
 		6B8566E7221869D400CB2505 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6B8566E5221869D400CB2505 /* Main.storyboard */; };
 		6B8566E9221869D700CB2505 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6B8566E8221869D700CB2505 /* Assets.xcassets */; };
 		6B8566EC221869D700CB2505 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6B8566EA221869D700CB2505 /* LaunchScreen.storyboard */; };
+		6B8566F622186AD500CB2505 /* FiveDaysWeatherJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B8566F522186AD500CB2505 /* FiveDaysWeatherJSON.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		6B8566E8221869D700CB2505 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6B8566EB221869D700CB2505 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6B8566ED221869D700CB2505 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6B8566F522186AD500CB2505 /* FiveDaysWeatherJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiveDaysWeatherJSON.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,12 +58,21 @@
 			children = (
 				6B8566E1221869D400CB2505 /* AppDelegate.swift */,
 				6B8566E3221869D400CB2505 /* ViewController.swift */,
+				6B8566F522186AD500CB2505 /* FiveDaysWeatherJSON.swift */,
 				6B8566E5221869D400CB2505 /* Main.storyboard */,
+				6B8566F422186AAE00CB2505 /* Supporting Files */,
+			);
+			path = FiveDaysWeather;
+			sourceTree = "<group>";
+		};
+		6B8566F422186AAE00CB2505 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
 				6B8566E8221869D700CB2505 /* Assets.xcassets */,
 				6B8566EA221869D700CB2505 /* LaunchScreen.storyboard */,
 				6B8566ED221869D700CB2505 /* Info.plist */,
 			);
-			path = FiveDaysWeather;
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -136,6 +147,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6B8566E4221869D400CB2505 /* ViewController.swift in Sources */,
+				6B8566F622186AD500CB2505 /* FiveDaysWeatherJSON.swift in Sources */,
 				6B8566E2221869D400CB2505 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -284,7 +296,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5288NF3D62;
-				INFOPLIST_FILE = FiveDaysWeather/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/FiveDaysWeather/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -302,7 +314,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5288NF3D62;
-				INFOPLIST_FILE = FiveDaysWeather/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/FiveDaysWeather/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
